@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>随问 AskAlong · 设置</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="head">
+      <span class="logo"></span>
+      <div>
+        <h1>随问 <em>AskAlong</em></h1>
+        <p class="sub">边读边问 AI 学习助手 · 设置</p>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>模型服务</h2>
+      <div class="field">
+        <label for="preset">预设</label>
+        <select id="preset"></select>
+        <p class="tip" id="preset-tip"></p>
+      </div>
+
+      <div class="field">
+        <label for="baseUrl">接口地址(Base URL)</label>
+        <input id="baseUrl" type="url" placeholder="https://…/chat/completions" spellcheck="false">
+        <p class="tip">任何 OpenAI 兼容的 chat/completions 接口均可</p>
+      </div>
+
+      <div class="field">
+        <label for="apiKey">API Key</label>
+        <div class="key-row">
+          <input id="apiKey" type="password" placeholder="粘贴你的 API Key" spellcheck="false" autocomplete="off">
+          <button id="key-eye" class="ghost" type="button" title="显示/隐藏">👁</button>
+        </div>
+        <p class="tip">Key 只保存在你的浏览器本地(<code>chrome.storage.sync</code>),不会上传到任何第三方 <a id="key-link" target="_blank" rel="noopener">获取 Key ↗</a></p>
+      </div>
+
+      <div class="field">
+        <label for="model">模型</label>
+        <input id="model" type="text" placeholder="glm-5.3-flash" spellcheck="false">
+      </div>
+
+      <div class="field">
+        <label for="temperature">创造性(temperature)<span id="temp-val" class="val"></span></label>
+        <input id="temperature" type="range" min="0" max="1" step="0.1">
+        <p class="tip">学习答疑建议 0.3–0.7:低更严谨,高更有发散性</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>阅读与上下文</h2>
+      <div class="field">
+        <label for="maxContextChars">文章上下文上限(字符)<span class="val" id="ctx-val"></span></label>
+        <input id="maxContextChars" type="number" min="2000" max="60000" step="1000">
+        <p class="tip">超出后自动按「开头 + 完整目录 + 与问题最相关的章节」截断</p>
+      </div>
+      <div class="field row">
+        <label for="showToolbar">划词后显示快捷工具条(解释 / 翻译 / 问AI)</label>
+        <input id="showToolbar" type="checkbox">
+      </div>
+    </section>
+
+    <footer class="foot">
+      <button id="btn-test" class="ghost" type="button">测试连接</button>
+      <span id="status" class="status"></span>
+      <button id="btn-save" class="primary" type="button">保存设置</button>
+    </footer>
+  </main>
+
+  <script src="../lib/shared.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

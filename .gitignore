@@ -1,0 +1,5 @@
+node_modules/
+e2e/.browsers/
+e2e/shots/
+*.zip
+.DS_Store

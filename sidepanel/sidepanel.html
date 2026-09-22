@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>随问 AskAlong</title>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo"></span>
+      <span class="name">随问 <em>AskAlong</em></span>
+    </div>
+    <div class="actions">
+      <button id="btn-clear" class="icon-btn" title="清空当前页对话">🗑</button>
+      <button id="btn-settings" class="icon-btn" title="设置">⚙</button>
+    </div>
+  </header>
+
+  <div id="ctx-bar" class="ctx-bar" title="">
+    <span id="ctx-icon">📄</span>
+    <span id="ctx-title" class="ctx-title">正在读取文章…</span>
+    <button id="ctx-refresh" class="mini-btn" title="重新提取正文">↻</button>
+    <label class="carry" title="提问时是否携带文章全文作为上下文">
+      <input type="checkbox" id="ctx-carry" checked> 全文
+    </label>
+  </div>
+
+  <main id="msgs" class="msgs"></main>
+
+  <div id="chips" class="chips"></div>
+
+  <footer class="composer">
+    <div id="sel-chip" class="sel-chip" style="display:none">
+      <span class="sel-label">将结合划选内容回答:</span><span id="sel-text"></span>
+      <button id="sel-close" class="mini-btn" title="忽略划选">✕</button>
+    </div>
+    <div class="input-row">
+      <textarea id="input" rows="1" placeholder="问问这篇文章…(Enter 发送,Shift+Enter 换行)"></textarea>
+      <button id="btn-send" class="send" title="发送">➤</button>
+    </div>
+  </footer>
+
+  <script src="../lib/shared.js"></script>
+  <script src="../lib/markdown-lite.js"></script>
+  <script src="sidepanel.js"></script>
+</body>
+</html>
