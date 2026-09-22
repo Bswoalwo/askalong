@@ -8,7 +8,13 @@
   <img src="docs/img/demo.gif" width="720" alt="划词即问演示:选中文字 → 点「解释」→ 行内流式作答">
 </p>
 
-![Chrome MV3](https://img.shields.io/badge/Chrome_MV3-Extension-4285F4) ![构建](https://img.shields.io/badge/构建-零依赖原生JS-3DDC84) ![协议](https://img.shields.io/badge/License-MIT-green)
+<p align="center">
+  <img src="https://img.shields.io/badge/Chrome_MV3-Extension-4285F4" alt="Chrome MV3 Extension">
+  &nbsp;
+  <img src="https://img.shields.io/badge/构建-零依赖原生JS-3DDC84" alt="零依赖原生JS">
+  &nbsp;
+  <img src="https://img.shields.io/badge/License-MIT-green" alt="MIT License">
+</p>
 
 <details>
 <summary>📷 侧边栏多轮对话长这样(点击展开)</summary>
