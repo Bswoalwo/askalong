@@ -5,17 +5,16 @@
 解决的核心痛点:读技术文章时看不懂某个术语,以前的流程是「选中 → 切到 AI → 粘贴 → 补充上下文 → 提问」,既麻烦,AI 又只能看到一个孤零零的片段。
 
 <p align="center">
-  <img src="docs/img/sidepanel.png" width="360" alt="侧边栏对话">
-  <img src="docs/img/quickcard.png" width="620" alt="行内快答卡">
+  <img src="docs/img/demo.gif" width="720" alt="划词即问演示:选中文字 → 点「解释」→ 行内流式作答">
 </p>
 
 ![Chrome MV3](https://img.shields.io/badge/Chrome_MV3-Extension-4285F4) ![构建](https://img.shields.io/badge/构建-零依赖原生JS-3DDC84) ![协议](https://img.shields.io/badge/License-MIT-green)
 
-## 效果预览
-
-| 划词工具条 | 编辑重发 |
-|---|---|
-| <img src="docs/img/toolbar.png" width="420"/> | <img src="docs/img/edit.png" width="300"/> |
+<details>
+<summary>📷 侧边栏多轮对话长这样(点击展开)</summary>
+<br>
+<img src="docs/img/sidepanel.png" width="380" alt="侧边栏对话">
+</details>
 
 ## 它是怎么解决三个痛点的
 
@@ -78,6 +77,10 @@ askalong/
 ```
 
 无框架、无构建步骤,全部原生 JS,clone 即可加载,方便自己魔改。
+
+## 参与贡献
+
+欢迎提交 Issue 和 PR!
 
 ## License
 
